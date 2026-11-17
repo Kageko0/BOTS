@@ -16,7 +16,7 @@ class ServerManagement(commands.Cog):
 
     # Verifica se o usuário que usa o comando é o dono do bot
     async def is_owner(interaction: discord.Interaction):
-        return interaction.user.id == int(os.getenv("BOT_OWNER_ID"))  # Substitua pelo seu ID
+        return interaction.user.id == int(os.getenv("BOT_OWNER_ID")) 
 
     @app_commands.command(name="listar_servidores", description="Lista os servidores aos quais o bot está conectado (somente o dono do bot pode usar).")
     @app_commands.check(is_owner)
