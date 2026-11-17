@@ -4,7 +4,7 @@ from discord.ext import commands
 from datetime import datetime
 from pymongo import MongoClient
 import os
-import pytz  # Importando pytz para trabalhar com fusos horários
+import pytz
 
 # Conexão com MongoDB
 client = MongoClient(os.getenv("MONGO_URI"))
