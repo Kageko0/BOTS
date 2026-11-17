@@ -28,7 +28,7 @@ embeds_collection = db["embeds"]
 async def on_ready():
     print(f"Bot conectado como {bot.user}")
     try:
-        # Sincroniza comandos globalmente (ou use guild-specific para testes mais rápidos)
+        # Sincroniza comandos globalmente
         synced = await bot.tree.sync()
         print(f"Comandos sincronizados: {len(synced)}")
     except Exception as e:
