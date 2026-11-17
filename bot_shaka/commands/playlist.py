@@ -33,7 +33,7 @@ class Playlist(commands.Cog):
                     'preferredcodec': 'mp3',
                     'preferredquality': '192',
                 }],
-                'noplaylist': False,  # Permite processar playlists
+                'noplaylist': False,
             }
 
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -54,8 +54,8 @@ class Playlist(commands.Cog):
                         voice_client.stop()
 
                     # Configurações do FFmpeg
-                    FFMPEG_PATH = "C:/ffmpeg/bin/ffmpeg.exe"  # Alterar para o caminho correto no sistema
-                    # FFMPEG_PATH = "/usr/bin/ffmpeg"  # Para Linux/Mac
+                    FFMPEG_PATH = "C:/ffmpeg/bin/ffmpeg.exe"
+                    # FFMPEG_PATH = "/usr/bin/ffmpeg"
                     FFMPEG_OPTIONS = {
                         'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                         'options': '-vn',
