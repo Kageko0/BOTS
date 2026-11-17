@@ -4,7 +4,7 @@ from discord.ext import commands
 from datetime import datetime, timedelta
 from pymongo import MongoClient
 import os
-import pytz  # Importar a biblioteca pytz
+import pytz
 
 # Conexão com MongoDB
 client = MongoClient(os.getenv("MONGO_URI"))
